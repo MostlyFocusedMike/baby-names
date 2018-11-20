@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/baby-names/static/js/runtime~main.7093ead3.js"
   },
   {
-    "revision": "b2ee8b76e6dfcf357ff0",
-    "url": "/baby-names/static/js/main.b2ee8b76.chunk.js"
+    "revision": "f625a86885ec84559af8",
+    "url": "/baby-names/static/js/main.f625a868.chunk.js"
   },
   {
     "revision": "3b31973540275cb76413",
     "url": "/baby-names/static/js/1.3b319735.chunk.js"
   },
   {
-    "revision": "b2ee8b76e6dfcf357ff0",
-    "url": "/baby-names/static/css/main.7b2038a3.chunk.css"
+    "revision": "f625a86885ec84559af8",
+    "url": "/baby-names/static/css/main.bd0a6692.chunk.css"
   },
   {
-    "revision": "f5aa5680612c593102276e78264c8722",
+    "revision": "f1c4c15943eadb669aac3b3320790888",
     "url": "/baby-names/index.html"
   }
 ];
