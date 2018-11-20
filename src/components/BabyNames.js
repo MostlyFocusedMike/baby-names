@@ -79,7 +79,7 @@ class BabyNames extends React.Component {
                 <form>
                     <div id="spelling-inputs">
                         <label htmlFor="spelling">Names that contain: </label>
-                        <input 
+                        <input
                             type="text"
                             id="spelling"
                             name="spelling"
@@ -119,7 +119,7 @@ class BabyNames extends React.Component {
                     </div>
                 </form>
                 <div id="name-holder">
-                    <div id="fake-table"> 
+                    <div id="fake-table">
                         <div id="t-header">
                             <h2>Rank</h2>
                             <h2>Name</h2>
@@ -128,7 +128,7 @@ class BabyNames extends React.Component {
                         <div id="t-body">
                             {
                                 this.state.names.sort(this.sortingMethod).map(nameObj => {
-                                    if (nameObj.name.toLowerCase().includes(this.state.spelling) && this.syllableCheck(nameObj.syllables)) {
+                                    if (nameObj.name.toLowerCase().includes(this.state.spelling.toLowerCase()) && this.syllableCheck(nameObj.syllables)) {
                                         return (
                                             <div class="row">
                                                 <div class="data">
