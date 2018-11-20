@@ -9,7 +9,8 @@ class BabyNames extends React.Component {
             names,
             spelling: "",
             sort: "rank",
-            reversed: false
+            reversed: false,
+            syllables: "0"
         }
         this.state = this.initState
     }
@@ -24,6 +25,10 @@ class BabyNames extends React.Component {
         this.setState({sort: e.target.value});
     }
 
+    handleSyllablesChange = (e) => {
+        this.setState({syllables: e.target.value});
+    }
+
     handleReverseChange = (e) => {
         this.setState((prevState) => (
             {
@@ -33,7 +38,18 @@ class BabyNames extends React.Component {
         ));
     }
 
-    sortingMethod = (a,b) => {
+    syllableCheck = (syllables) => {
+        if (this.state.syllables == 0) {
+            return true;
+        } else {
+            if (this.state.syllables == syllables) {
+                return true;
+            }
+            return false;
+        }
+    }
+
+    sortingMethod = (a,b) => { // I know this is not the right way to sort, this is just quick and dirty
         if (this.state.sort === 'alpha' && !this.state.reversed) {
             if (a.name < b.name) return -1;
             if (a.name > b.name) return 1;
@@ -42,6 +58,8 @@ class BabyNames extends React.Component {
             return a.rank - b.rank
         } else if (this.state.sort === 'length' && !this.state.reversed) {
             return a.name.length - b.name.length
+        } else if (this.state.sort === 'syllables' && !this.state.reversed) {
+            return a.syllables - b.syllables
         } else if (this.state.sort === 'alpha' && this.state.reversed) {
             if (a.name < b.name) return 1;
             if (a.name > b.name) return -1;
@@ -50,6 +68,8 @@ class BabyNames extends React.Component {
             return b.rank - a.rank
         } else if (this.state.sort === 'length' && this.state.reversed) {
             return b.name.length - a.name.length
+        } else if (this.state.sort === 'syllables' && this.state.reversed) {
+            return b.syllables - a.syllables
         }
     }
 
@@ -70,6 +90,16 @@ class BabyNames extends React.Component {
                         <option value="rank">Rank</option>
                         <option value="alpha">Alphabetically</option>
                         <option value="length">Length</option>
+                        <option value="syllables">Syllables</option>
+                    </select>
+                    <label htmlFor="syllables">Number of syllables:</label>
+                    <select value={this.state.syllables} onChange={this.handleSyllablesChange} id="syllables">
+                        <option value="0">Any</option>
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
                     </select>
                     <label htmlFor="reverse">Reverse</label>
                     <input
@@ -86,7 +116,7 @@ class BabyNames extends React.Component {
                     <th>Syllables</th>
                 {
                     this.state.names.sort(this.sortingMethod).map(nameObj => {
-                        if (nameObj.name.toLowerCase().includes(this.state.spelling)) {
+                        if (nameObj.name.toLowerCase().includes(this.state.spelling) && this.syllableCheck(nameObj.syllables)) {
                             return (
                                 <tr>
                                     <td>
