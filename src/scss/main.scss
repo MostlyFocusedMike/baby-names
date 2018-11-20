@@ -1,0 +1,94 @@
+$bor: 2px solid black;
+
+%basic-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+%basic-button {
+  background: #4d94ff;
+  color: white;
+  border: none;
+  padding: .3rem .7rem;
+  margin: .5rem auto;
+  display: block;
+  transition: background 150ms;
+  font-size: .75rem;
+  &:hover {
+    background: #1D88E3;
+  }
+  &:active {
+    background: #6EB0E8;
+  }
+}
+%basic-card {
+  box-shadow: 1px 1px 10px rgba(0,0,0,.3);
+  z-index: 10;
+  display: block;
+  margin: 1.5rem auto;
+  font-size: 1rem;
+  background: white;
+  text-align: center;
+}
+
+form {
+    @extend %basic-card;
+    margin: 0;
+    width: 100%;
+    font-size: 1.5rem;
+    @media (max-width: 450px) {
+        font-size: 1em;
+    }
+    div {
+        display: inline-block;
+        margin: .5rem;
+        label, input, select {
+            margin: .2rem;
+            font-size: 1.25rem;
+            @media (max-width: 450px) {
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+.row:nth-child(even) {background-color: #f3fbff;}
+#fake-table {
+    width: 50%;
+    min-width: 23rem;
+    max-width: 50rem;
+    margin: 1rem auto;
+}
+#t-header {
+    @extend %basic-flex;
+    justify-content: space-evenly;
+    h2 {
+        width: 33%;
+        margin: 0;
+        text-align: center;
+    }
+}
+#t-body {
+    height: 85vh;
+    overflow: auto;
+    font-size: 1.25rem;
+    @media (max-width: 450px) {
+        height: 70vh;
+        color: red;
+    }
+    .row {
+        @extend %basic-flex;
+        width: 100%;
+    }
+    .data {
+        width: 33%;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+
+

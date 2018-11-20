@@ -77,63 +77,77 @@ class BabyNames extends React.Component {
         return (
             <div>
                 <form>
-                    <label htmlFor="spelling">Names that contain: </label>
-                    <input 
-                        type="text"
-                        id="spelling"
-                        name="spelling"
-                        value={this.state.spelling}
-                        onChange={this.handleSpellChange}
-                    />
-                    <label htmlFor="sort">Sort by:</label>
-                    <select value={this.state.sort} onChange={this.handleSortChange} id="sort">
-                        <option value="rank">Rank</option>
-                        <option value="alpha">Alphabetically</option>
-                        <option value="length">Length</option>
-                        <option value="syllables">Syllables</option>
-                    </select>
-                    <label htmlFor="syllables">Number of syllables:</label>
-                    <select value={this.state.syllables} onChange={this.handleSyllablesChange} id="syllables">
-                        <option value="0">Any</option>
-                        <option value="5">5</option>
-                        <option value="4">4</option>
-                        <option value="3">3</option>
-                        <option value="2">2</option>
-                        <option value="1">1</option>
-                    </select>
-                    <label htmlFor="reverse">Reverse</label>
-                    <input
-                        id="reverse"
-                        name="reverse"
-                        type="checkbox"
-                        checked={this.state.reversed}
-                        onChange={this.handleReverseChange}
-                    />
+                    <div id="spelling-inputs">
+                        <label htmlFor="spelling">Names that contain: </label>
+                        <input 
+                            type="text"
+                            id="spelling"
+                            name="spelling"
+                            value={this.state.spelling}
+                            onChange={this.handleSpellChange}
+                        />
+                    </div>
+                    <div id="sorting-inputs">
+                        <label htmlFor="sort">Sort by:</label>
+                        <select value={this.state.sort} onChange={this.handleSortChange} id="sort">
+                            <option value="rank">Rank</option>
+                            <option value="alpha">Alphabetically</option>
+                            <option value="length">Length</option>
+                            <option value="syllables">Syllables</option>
+                        </select>
+                    </div>
+                    <div id="syllable-inputs">
+                        <label htmlFor="syllables">Number of syllables:</label>
+                        <select value={this.state.syllables} onChange={this.handleSyllablesChange} id="syllables">
+                            <option value="0">Any</option>
+                            <option value="5">5</option>
+                            <option value="4">4</option>
+                            <option value="3">3</option>
+                            <option value="2">2</option>
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+                    <div id="reverse-inputs">
+                        <label htmlFor="reverse">Reverse</label>
+                        <input
+                            id="reverse"
+                            name="reverse"
+                            type="checkbox"
+                            checked={this.state.reversed}
+                            onChange={this.handleReverseChange}
+                        />
+                    </div>
                 </form>
-                <table>
-                    <th>Rank</th>
-                    <th>Name</th>
-                    <th>Syllables</th>
-                {
-                    this.state.names.sort(this.sortingMethod).map(nameObj => {
-                        if (nameObj.name.toLowerCase().includes(this.state.spelling) && this.syllableCheck(nameObj.syllables)) {
-                            return (
-                                <tr>
-                                    <td>
-                                        {nameObj.rank}
-                                    </td>
-                                    <td>
-                                        {nameObj.name}
-                                    </td>
-                                    <td>
-                                        {nameObj.syllables}
-                                    </td>
-                                </tr>
-                            )
-                        }
-                    })
-                }
-                </table>
+                <div id="name-holder">
+                    <div id="fake-table"> 
+                        <div id="t-header">
+                            <h2>Rank</h2>
+                            <h2>Name</h2>
+                            <h2>Syllables</h2>
+                        </div>
+                        <div id="t-body">
+                            {
+                                this.state.names.sort(this.sortingMethod).map(nameObj => {
+                                    if (nameObj.name.toLowerCase().includes(this.state.spelling) && this.syllableCheck(nameObj.syllables)) {
+                                        return (
+                                            <div class="row">
+                                                <div class="data">
+                                                    {nameObj.rank}
+                                                </div>
+                                                <div class="data">
+                                                    {nameObj.name}
+                                                </div>
+                                                <div class="data">
+                                                    {nameObj.syllables}
+                                                </div>
+                                            </div>
+                                        )
+                                    }
+                                })
+                            }
+                        </div>
+                    </div>
+                </div>
 
             </div>
         )

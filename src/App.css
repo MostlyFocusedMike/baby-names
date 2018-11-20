@@ -1,0 +1,63 @@
+#t-header, #t-body .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+form {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  display: block;
+  margin: 1.5rem auto;
+  font-size: 1rem;
+  background: white;
+  text-align: center; }
+
+form {
+  margin: 0;
+  width: 100%;
+  font-size: 1.5rem; }
+  @media (max-width: 450px) {
+    form {
+      font-size: 1em; } }
+  form div {
+    display: inline-block;
+    margin: .5rem; }
+    form div label, form div input, form div select {
+      margin: .2rem;
+      font-size: 1.25rem; }
+      @media (max-width: 450px) {
+        form div label, form div input, form div select {
+          font-size: 1em; } }
+
+.row:nth-child(even) {
+  background-color: #f3fbff; }
+
+#fake-table {
+  width: 50%;
+  min-width: 23rem;
+  max-width: 50rem;
+  margin: 1rem auto; }
+
+#t-header {
+  justify-content: space-evenly; }
+  #t-header h2 {
+    width: 33%;
+    margin: 0;
+    text-align: center; }
+
+#t-body {
+  height: 85vh;
+  overflow: auto;
+  font-size: 1.25rem; }
+  @media (max-width: 450px) {
+    #t-body {
+      height: 70vh;
+      color: red; } }
+  #t-body .row {
+    width: 100%; }
+  #t-body .data {
+    width: 33%;
+    margin: 0;
+    text-align: center; }
+
+/*# sourceMappingURL=app.css.map */
