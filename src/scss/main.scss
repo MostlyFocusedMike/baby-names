@@ -89,12 +89,12 @@ form {
     }
 }
 #t-body {
-    height: 85vh;
+    height: 80vh;
     overflow: auto;
     font-size: 1.25rem;
     color: #676767;
     @media (max-width: 970px) {
-        height: 70vh;
+        height: 65vh;
     }
     .row {
         @extend %basic-flex;
