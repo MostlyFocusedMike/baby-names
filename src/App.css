@@ -12,10 +12,18 @@ form {
   background: white;
   text-align: center; }
 
+html {
+  background: url("./images/bg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
 form {
   margin: 0;
   width: 100%;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  opacity: .95; }
   @media (max-width: 450px) {
     form {
       font-size: 1em; } }
@@ -24,7 +32,8 @@ form {
     margin: .5rem; }
     form div label, form div input, form div select {
       margin: .2rem;
-      font-size: 1.25rem; }
+      font-size: 1.25rem;
+      padding: .25rem; }
       @media (max-width: 450px) {
         form div label, form div input, form div select {
           font-size: 1em; } }
@@ -33,28 +42,36 @@ form {
   background-color: #f3fbff; }
 
 #fake-table {
-  width: 50%;
+  width: 60%;
   min-width: 23rem;
-  max-width: 50rem;
-  margin: 1rem auto; }
+  max-width: 40rem;
+  margin: 1rem auto;
+  background: #FFF;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  opacity: .95; }
 
 #t-header {
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  flex-shrink: 1.5;
+  padding: .5rem 0; }
   #t-header h2 {
     width: 33%;
     margin: 0;
-    text-align: center; }
+    text-align: center;
+    color: #454545;
+    font-style: italic; }
 
 #t-body {
   height: 85vh;
   overflow: auto;
-  font-size: 1.25rem; }
-  @media (max-width: 450px) {
+  font-size: 1.25rem;
+  color: #676767; }
+  @media (max-width: 970px) {
     #t-body {
-      height: 70vh;
-      color: red; } }
+      height: 70vh; } }
   #t-body .row {
-    width: 100%; }
+    width: 100%;
+    padding: .5rem 0; }
   #t-body .data {
     width: 33%;
     margin: 0;
