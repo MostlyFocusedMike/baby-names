@@ -1,13 +1,14 @@
 {
-  "main.css": "/baby-names/static/css/main.164ea392.chunk.css",
-  "main.js": "/baby-names/static/js/main.b65242b8.chunk.js",
-  "main.js.map": "/baby-names/static/js/main.b65242b8.chunk.js.map",
+  "main.css": "/baby-names/static/css/main.4336d0be.chunk.css",
+  "main.js": "/baby-names/static/js/main.1db4e1f2.chunk.js",
+  "main.js.map": "/baby-names/static/js/main.1db4e1f2.chunk.js.map",
   "static/js/1.3b319735.chunk.js": "/baby-names/static/js/1.3b319735.chunk.js",
   "static/js/1.3b319735.chunk.js.map": "/baby-names/static/js/1.3b319735.chunk.js.map",
   "runtime~main.js": "/baby-names/static/js/runtime~main.7093ead3.js",
   "runtime~main.js.map": "/baby-names/static/js/runtime~main.7093ead3.js.map",
-  "static/css/main.164ea392.chunk.css.map": "/baby-names/static/css/main.164ea392.chunk.css.map",
+  "static/media/App.css": "/baby-names/static/media/bg.6e029b20.jpg",
+  "static/css/main.4336d0be.chunk.css.map": "/baby-names/static/css/main.4336d0be.chunk.css.map",
   "index.html": "/baby-names/index.html",
-  "precache-manifest.a0974b6c18c1ac93abe024cd9e729963.js": "/baby-names/precache-manifest.a0974b6c18c1ac93abe024cd9e729963.js",
+  "precache-manifest.663bdff5418cf16115ac9a4ceace8892.js": "/baby-names/precache-manifest.663bdff5418cf16115ac9a4ceace8892.js",
   "service-worker.js": "/baby-names/service-worker.js"
 }
