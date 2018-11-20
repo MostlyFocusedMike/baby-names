@@ -87,15 +87,6 @@ class BabyNames extends React.Component {
                             onChange={this.handleSpellChange}
                         />
                     </div>
-                    <div id="sorting-inputs">
-                        <label htmlFor="sort">Sort by:</label>
-                        <select value={this.state.sort} onChange={this.handleSortChange} id="sort">
-                            <option value="rank">Rank</option>
-                            <option value="alpha">Alphabetically</option>
-                            <option value="length">Length</option>
-                            <option value="syllables">Syllables</option>
-                        </select>
-                    </div>
                     <div id="syllable-inputs">
                         <label htmlFor="syllables">Number of syllables:</label>
                         <select value={this.state.syllables} onChange={this.handleSyllablesChange} id="syllables">
@@ -107,8 +98,17 @@ class BabyNames extends React.Component {
                             <option value="1">1</option>
                         </select>
                     </div>
+                    <div id="sorting-inputs">
+                        <label htmlFor="sort">Sort by:</label>
+                        <select value={this.state.sort} onChange={this.handleSortChange} id="sort">
+                            <option value="rank">Rank</option>
+                            <option value="alpha">Alphabetically</option>
+                            <option value="length">Length</option>
+                            <option value="syllables">Syllables</option>
+                        </select>
+                    </div>
                     <div id="reverse-inputs">
-                        <label htmlFor="reverse">Reverse</label>
+                        <label htmlFor="reverse">Reverse Sort: </label>
                         <input
                             id="reverse"
                             name="reverse"

@@ -21,22 +21,21 @@ html {
 
 form {
   margin: 0;
-  width: 100%;
-  font-size: 1.5rem;
-  opacity: .95; }
+  width: 100%; }
   @media (max-width: 450px) {
     form {
       font-size: 1em; } }
   form div {
     display: inline-block;
     margin: .5rem; }
-    form div label, form div input, form div select {
+    form div label, form div input, form div select, form div option {
       margin: .2rem;
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       padding: .25rem; }
       @media (max-width: 450px) {
-        form div label, form div input, form div select {
-          font-size: 1em; } }
+        form div label, form div input, form div select, form div option {
+          padding: .1rem;
+          margin: .1rem; } }
 
 .row:nth-child(even) {
   background-color: #f3fbff; }
